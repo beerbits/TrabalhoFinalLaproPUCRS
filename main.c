@@ -29,7 +29,7 @@ int main()
             matriz[i][j]= gerNum_Aleatorio();
         }
     }
-
+  printf(“yuri arrombado”);
 
     return 0;
 }
