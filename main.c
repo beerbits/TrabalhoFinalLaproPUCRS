@@ -3,19 +3,13 @@
 #include <time.h>
 
 
-int geraLinha_Aleatorio(){
+int geraNumero_Aleatorio(tam){
     int i=0;
-    i = rand() % 6;
+    i = rand() % tam;
 
     return(i);
     }
 
-int geraColuna_Aleatorio(){
-    int j=0;
-    j = rand() % 4;
-
-    return(j);
-    }
 
 
 int main()
@@ -59,11 +53,11 @@ int main()
     cartas[22] = 'L';
     cartas[23] = 'L';
 
-    i = geraLinha_Aleatorio();
-    j = geraColuna_Aleatorio();
+    i = geraNumero_Aleatorio(6);
+    j = geraNumero_Aleatorio(4);
     while(pos < 24){
-        i = geraLinha_Aleatorio();
-        j = geraColuna_Aleatorio();
+        i = geraNumero_Aleatorio(6);
+        j = geraNumero_Aleatorio(4);
         while(tabuleiro[i][j] == 'X'){
             tabuleiro[i][j] = cartas[pos];
             pos++;
